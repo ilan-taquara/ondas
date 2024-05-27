@@ -24,16 +24,36 @@ const CheckinData = () => {
 
   if (dataCheckin) {
     objectsArray = dataCheckin.map((arr) => {
-      return {
-        name: arr[0],
-        dateHour: arr[1],
-        hour: +arr[1].split(',')[1].slice(1, 3),
-        childs: arr[2],
-        childsName: arr[3],
-        teacher: arr[4],
-        numberOfClass: arr[5],
-      };
+      const hour = arr[1];
+      if (hour.includes(',')) {
+        // console.log(arr[0]);
+        // console.log('Tem virgula');
+        return {
+          name: arr[0],
+          dateHour: arr[1],
+          hour: arr[1].split(', ')[1].slice(0, 2),
+          childs: arr[2],
+          childsName: arr[3],
+          teacher: arr[4],
+          numberOfClass: arr[5],
+        };
+      } else {
+        // console.log(arr[0]);
+        // console.log('Não tem virgula');
+        return {
+          name: arr[0],
+          dateHour: arr[1],
+          hour: arr[1].split('/')[2].slice(5, 7),
+          childs: arr[2],
+          childsName: arr[3],
+          teacher: arr[4],
+          numberOfClass: arr[5],
+        };
+      }
     });
+    {
+      console.log(objectsArray);
+    }
     afternoonArray = objectsArray.filter((arr) => {
       return arr.hour > 17;
     });
