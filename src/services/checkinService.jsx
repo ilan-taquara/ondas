@@ -1,6 +1,6 @@
 const checkinService = (props) => {
   const addToExcel = () => {
-    fetch('https://ondasback-production.up.railway.app/addCheckinExcel', {
+    fetch('https://ondas-backend-javascript-production.up.railway.app/addCheckinExcel', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -18,7 +18,7 @@ const checkinService = (props) => {
   const downloadExcel = async () => {
     try {
       const response = await fetch(
-        'https://ondasback-production.up.railway.app/downloadCheckinExcel',
+        'https://ondas-backend-javascript-production.up.railway.app/downloadCheckinExcel',
       );
       const blob = await response.blob();
 
@@ -39,7 +39,7 @@ const checkinService = (props) => {
 
   const dataCheckinExcel = async () => {
     const response = await fetch(
-      'https://ondasback-production.up.railway.app/dataCheckinExcel',
+      'https://ondas-backend-javascript-production.up.railway.app/dataCheckinExcel',
     );
     const json = await response.json();
     return json;
@@ -47,7 +47,7 @@ const checkinService = (props) => {
 
   const updateChamadaExcel = async () => {
     const response = await fetch(
-      'https://ondasback-production.up.railway.app/updateChamadaExcel',
+      'https://ondas-backend-javascript-production.up.railway.app/updateChamadaExcel',
     );
     return 'Atualizado';
   };

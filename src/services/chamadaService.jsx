@@ -21,7 +21,7 @@ const chamadaService = (props) => {
   const downloadExcel = async () => {
     try {
       const response = await fetch(
-        'https://ondasback-production.up.railway.app/downloadChamadaExcel',
+        'https://ondas-backend-javascript-production.up.railway.app/downloadChamadaExcel',
       );
       const blob = await response.blob();
 
@@ -41,7 +41,7 @@ const chamadaService = (props) => {
   };
   const dataToExcel = async () => {
     const response = await fetch(
-      'https://ondasback-production.up.railway.app/dataChamadaExcelFromRegisterForm',
+      'https://ondas-backend-javascript-production.up.railway.app/dataChamadaExcelFromRegisterForm',
       {
         method: 'POST',
         headers: {
@@ -56,7 +56,7 @@ const chamadaService = (props) => {
 
   const dataInitial = async () => {
     const response = await fetch(
-      'https://ondasback-production.up.railway.app/dataChamadaExcelFromRegisterFormInitial',
+      'https://ondas-backend-javascript-production.up.railway.app/dataChamadaExcelFromRegisterFormInitial',
       {
         method: 'POST',
         headers: {

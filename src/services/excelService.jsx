@@ -1,6 +1,6 @@
 const excelService = (props) => {
   const addToExcel = () => {
-    fetch('https://ondasback-production.up.railway.app/adicionar', {
+    fetch('https://ondas-backend-javascript-production.up.railway.app/adicionar', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -18,7 +18,7 @@ const excelService = (props) => {
   const downloadExcel = async () => {
     try {
       const response = await fetch(
-        'https://ondasback-production.up.railway.app/download',
+        'https://ondas-backend-javascript-production.up.railway.app/download',
       );
       const blob = await response.blob();
 

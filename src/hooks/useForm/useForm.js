@@ -55,7 +55,7 @@ const useForm = (type) => {
     if (event.target.id === 'name') {
       async function planilhaDadosName() {
         const response = await fetch(
-          'https://ondasback-production.up.railway.app/names',
+          'https://ondas-backend-javascript-production.up.railway.app/names',
         );
         const dataInJson = await response.json();
         setData(dataInJson);

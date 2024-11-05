@@ -33,7 +33,7 @@ const Certificate = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const response = await fetch(
-      'https://ondasback-production.up.railway.app/certificate',
+      'https://ondas-backend-javascript-production.up.railway.app/certificate',
       {
         method: 'POST',
         headers: {
