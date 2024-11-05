@@ -1,7 +1,7 @@
 const chamadaService = (props) => {
   const updateToExcel = () => {
     fetch(
-      'https://ondasback-production.up.railway.app/updateChamadaExcelFromRegisterForm',
+      'https://ondas-backend-javascript-production.up.railway.app/updateChamadaExcelFromRegisterForm',
       {
         method: 'POST',
         headers: {
