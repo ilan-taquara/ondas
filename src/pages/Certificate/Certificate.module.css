@@ -1,0 +1,47 @@
+.certificateFormBg {
+  background-color: var(--color-p3);
+}
+
+.form {
+  background-color: var(--color-p1);
+  padding: var(--space-032);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.certificate {
+  border: 5px solid #000;
+  padding: 20px;
+  margin: 20px 0;
+  text-align: center;
+  position: relative;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.certificate h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.certificate p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.certificate .btn {
+  margin-top: 20px;
+  background-color: #83ADBE;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.certificate .btn:hover {
+  background-color: #6f9db0;
+}
